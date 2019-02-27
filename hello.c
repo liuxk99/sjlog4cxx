@@ -14,18 +14,23 @@
  * limitations under the License.
  */
 
-#define  TRACE_TAG   TRACE_ADB
-
 #include <stdio.h>
 #include <stdlib.h>
 
-int main(int argc, char **argv)
+void hello_main(int argc, char **argv)
 {
     int i = 0;
-    for (; i < argc; i++){
+    for (; i < argc; i++)
+    {
         printf("argv[%d]: %s\n", i, argv[i]);
-    }
-    printf("hello, Android!\n");
+    }    
+}
+
+int main(int argc, char **argv)
+{
+    hello_main(argc, argv);
+
+    printf("Hello, Android!\n");
 
     return 0;
 }
