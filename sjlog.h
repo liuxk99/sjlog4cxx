@@ -11,9 +11,11 @@ public:
     SjLog(char* msg, Dumper* dumper) {
         mMsg = msg;
         this->dumper = dumper;
+        print("=>", mMsg);
     }
 
     ~SjLog() {
+        print("<-", mMsg);
         if (dumper != NULL) {
             delete dumper;
             dumper = NULL;
