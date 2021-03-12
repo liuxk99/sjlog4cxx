@@ -60,6 +60,7 @@ LOCAL_STATIC_LIBRARIES := libasync_safe
 
 LOCAL_SRC_FILES := \
     android/logcat_dumper.cpp \
+    android/loggable.cpp \
     android/sjlog4a.cpp
 
 include $(BUILD_EXECUTABLE)
