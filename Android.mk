@@ -38,7 +38,8 @@ LOCAL_MODULE_TAGS := optional
 LOCAL_FORCE_STATIC_EXECUTABLE := true
 
 LOCAL_SRC_FILES := \
-    sjlog.cpp
+    sjlog.cpp \
+    loggable.cpp
 
 include $(BUILD_EXECUTABLE)
 
@@ -60,7 +61,7 @@ LOCAL_STATIC_LIBRARIES := libasync_safe
 
 LOCAL_SRC_FILES := \
     android/logcat_dumper.cpp \
-    android/loggable.cpp \
+    android/loggable4a.cpp \
     android/sjlog4a.cpp
 
 include $(BUILD_EXECUTABLE)
