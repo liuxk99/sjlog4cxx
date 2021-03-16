@@ -1,14 +1,7 @@
-#ifndef SJ_DUMPER_H
-#define SJ_DUMPER_H
+#ifndef SJDUMPER_H
+#define SJDUMPER_H
 
-#include <string.h>
-
-class Dumper {
-public:
-    virtual ~Dumper() {};
-public:
-    virtual void dump(const char* prefix, const char* msg) = 0;
-};
+#include "dumper.h"
 
 class SjDumper: public Dumper {
 public:
