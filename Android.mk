@@ -7,7 +7,9 @@ LOCAL_PATH := $(call my-dir)
 include $(CLEAR_VARS)
 
 LOCAL_SRC_FILES := \
-	hello.c
+	sjdumper.cpp \
+	loggable.cpp \
+	sjlog.cpp \
 
 LOCAL_CFLAGS := \
 	-O2 \
@@ -18,6 +20,6 @@ LOCAL_CFLAGS := \
 LOCAL_SHARED_LIBRARIES := \
 	libc
 
-LOCAL_MODULE := hello
+LOCAL_MODULE := sjlog
 
 include $(BUILD_EXECUTABLE)
