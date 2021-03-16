@@ -24,24 +24,10 @@ LOCAL_MODULE := sjlog
 
 include $(BUILD_EXECUTABLE)
 
-include $(CLEAR_VARS)
-
-LOCAL_SRC_FILES := \
-	android/sjdumper4a.cpp \
-	android/loggable4a.cpp \
-	android/sjlog4a.cpp \
-
-LOCAL_CFLAGS := \
-	-O2 \
-	-g \
-	-Wall \
-	-Wno-unused-parameter
-
-LOCAL_SHARED_LIBRARIES := \
-	libc
-
-LOCAL_STATIC_LIBRARIES := libasync_safe
-
-LOCAL_MODULE := sjlog4a
-
-include $(BUILD_EXECUTABLE)
+# >>>
+# http://wiki.letv.cn/display/TVEUIDEV/13_API-Levels
+# AmlT972(28)
+ifeq (1,$(strip $(shell expr $(PLATFORM_SDK_VERSION) \>\= 27)))
+	include $(call all-makefiles-under,$(LOCAL_PATH))
+endif
+# <<<
